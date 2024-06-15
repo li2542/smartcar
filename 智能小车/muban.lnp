@@ -1,0 +1,10 @@
+"STARTUP.obj",
+"main.obj",
+"delay.obj",
+"motor.obj",
+"uart.obj",
+"hc04.obj",
+"sg90.obj",
+"Oled.obj" 
+TO "muban" 
+RAMSIZE(256) 

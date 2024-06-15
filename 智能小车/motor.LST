@@ -1,0 +1,96 @@
+C51 COMPILER V9.52.0.0   MOTOR                                                             04/23/2024 21:01:13 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MOTOR
+OBJECT MODULE PLACED IN motor.OBJ
+COMPILER INVOKED BY: D:\Keil\C51\BIN\C51.EXE motor.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include "reg52.h"
+   2          
+   3          sbit RightConlA = P3^7;//控制右轮
+   4          sbit RightConlB = P3^3;
+   5          
+   6          sbit LeftConlA = P3^4;//控制左轮
+   7          sbit LeftConlB = P3^5;
+   8          
+   9          void goForwordLeft(){//前进右转
+  10   1        LeftConlA = 0;
+  11   1        LeftConlB = 1;
+  12   1      }
+  13          
+  14          void stopLeft(){//停止右转
+  15   1        LeftConlA = 0;
+  16   1        LeftConlB = 0;
+  17   1      }
+  18          
+  19          void goForwordRight(){//前进左转
+  20   1        RightConlA = 0;
+  21   1        RightConlB = 1;
+  22   1      }
+  23          
+  24          void stopRight(){//停止左转
+  25   1        RightConlA = 0;
+  26   1        RightConlB = 0;
+  27   1      }
+  28          
+  29          
+  30          
+  31          
+  32          
+  33          void goBack(){//小车后退代码封装
+  34   1        LeftConlA = 1;
+  35   1        LeftConlB = 0;
+  36   1        
+  37   1        RightConlA = 1;
+  38   1        RightConlB = 0;
+  39   1      }
+  40          
+  41          void goForword(){//小车前进代码封装
+  42   1        LeftConlA = 0;
+  43   1        LeftConlB = 1;
+  44   1        
+  45   1        RightConlA = 0;
+  46   1        RightConlB = 1;
+  47   1      }
+  48          
+  49          void goLeft(){//左转
+  50   1        LeftConlA = 0;
+  51   1        LeftConlB = 0;
+  52   1        
+  53   1        RightConlA = 0;
+  54   1        RightConlB = 1;
+  55   1      }
+C51 COMPILER V9.52.0.0   MOTOR                                                             04/23/2024 21:01:13 PAGE 2   
+
+  56          
+  57          void goRight(){//右转
+  58   1        LeftConlA = 0;
+  59   1        LeftConlB = 1;
+  60   1        
+  61   1        RightConlA = 0;
+  62   1        RightConlB = 0;
+  63   1      }
+  64          
+  65          void stop(){//停止
+  66   1        LeftConlA = 0;
+  67   1        LeftConlB = 0;
+  68   1        
+  69   1        RightConlA = 0;
+  70   1        RightConlB = 0;
+  71   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     65    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
